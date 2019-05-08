@@ -1,0 +1,19 @@
+.login-back-image {
+    background-image: url("../../assets/images/tuleap-issue-tracker-module_1.png");
+    /* The image used */
+    background-color: #cccccc;
+    height: 600px;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  @media (min-width: 768px) {
+    .image {
+      position: absolute;
+      top: 21%;
+      left: 30%;
+    }
+  }
+  

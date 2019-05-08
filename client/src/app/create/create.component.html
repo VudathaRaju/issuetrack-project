@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <h1>Issue Creator</h1>
+    <div class="row">
+      Title:
+      <input type="text" class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Title"
+        [(ngModel)]="title">
+      <div class="col-lg-12 nopadding">
+        Description:
+        <textarea id="txtEditor" [(ngModel)]="description"></textarea>
+      </div>
+      Upload file:
+      <input type="file" class="form-control" name="file" (change)="handleFileInput($event.target.files)"
+        aria-describedby="emailHelp" placeholder="Attachment">
+
+      <button class="btn btn-primary" (click)="createIssue()">Submit</button>
+    </div>
+  </div>
+</div>

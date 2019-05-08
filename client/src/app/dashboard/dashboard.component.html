@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-12">
+      <h1>Dashboard</h1>
+      <button class="btn btn-primary" (click)="create()">Create</button>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col col-lg-12">
+      <table class="table" id="myTable">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Status</th>
+            <th scope="col">Reporter</th>
+            <th scope="col">Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let issue of allIssues;  let i = index;'>
+            <td><a href="javascript:void(0)" (click)="issueDetail(issue)">{{issue.title}}</a></td>
+            <td>{{issue.status}}</td>
+            <td>{{issue.reporter[0]?.firstname}}</td>
+            <td>{{issue.date|date:'medium'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
